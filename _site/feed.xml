@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-04T22:11:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Taking scientific notes efficiently using Markdown + KaTeX</title><link href="http://localhost:4000/blog/2021/notes/" rel="alternate" type="text/html" title="Taking scientific notes efficiently using Markdown + KaTeX" /><published>2021-10-03T17:12:00+02:00</published><updated>2021-10-03T17:12:00+02:00</updated><id>http://localhost:4000/blog/2021/notes</id><content type="html" xml:base="http://localhost:4000/blog/2021/notes/">&lt;p&gt;As a PhD student, reading scientific articles and textbooks has occupied a significant amount of my time. I have been at some point overwhelmed by the quantity of knowledge to process and synthesize at the same time. Here is the workflow that I have found to try to keep up to date with all the research projects that I have going on. It involves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VSCode&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; and a little library that I have written &lt;a href=&quot;https://github.com/lionelchg/Markdown2LaTeX&quot;&gt;Markdown2LaTeX&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have been taking notes on paper notebooks for quite a long time at the beginning of my PhD, stacking them one on top of the other over time. When I wanted to go back to some thoughts that I had it was always a tedious process to find them back in my pile of notebooks. After that I would usually start writing a TeX about it, translating whatever I had written a while ago. This workflow had several drawbacks: it was not easy to back go over ideas that I had at some point and remembering exactly what I was thinking at that time. Since ideas at the beginning are not well formed and finished it does not really make sense to write it to TeX at that moment.&lt;/p&gt;
+
+&lt;p&gt;That is when I discovered &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VSCode&lt;/code&gt; using Markdown Preview. This tool allows to write down Markdown and instantly see you writings on a side tab (see screenshot below). Using KaTeX, it is possible to write math as TeX quickly and efficiently (definitions of macros is also possible). It has allowed me to take and store notes at the same place. It is also a great tool to interact with others during visioconferences without needing to scribble some things on your notebook and then showing it on the webcam.&lt;/p&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm mt-3 mt-md-0&quot;&gt;
+        &lt;img class=&quot;img-fluid rounded z-depth-1&quot; src=&quot;/assets/img/markdown_vscode.png&quot; alt=&quot;&quot; title=&quot;example image&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;caption&quot;&gt;
+    Markdown Preview in VSCode.
+&lt;/div&gt;
+
+&lt;p&gt;Taking this logic a step further, after a Markdown file is written and cleaned, it can be converted directly into a LaTeX file using &lt;a href=&quot;https://github.com/lionelchg/Markdown2LaTeX&quot;&gt;Markdown2LaTeX&lt;/a&gt;. Running the following command&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;md2latex &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; linear_algebra.md &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; macros.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;allows to retrieve the LaTeX file. A file where KaTeX macros are defined can be supplemented and macros can be converted to TeX format.&lt;/p&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm mt-3 mt-md-0&quot;&gt;
+        &lt;img class=&quot;img-fluid rounded z-depth-1&quot; src=&quot;/assets/img/latex_mdconversion.png&quot; alt=&quot;&quot; title=&quot;example image&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;caption&quot;&gt;
+    Markdown file converted to LaTeX file and resulting pdf.
+&lt;/div&gt;</content><author><name></name></author><summary type="html">As a PhD student, reading scientific articles and textbooks has occupied a significant amount of my time. I have been at some point overwhelmed by the quantity of knowledge to process and synthesize at the same time. Here is the workflow that I have found to try to keep up to date with all the research projects that I have going on. It involves VSCode, Markdown and a little library that I have written Markdown2LaTeX.</summary></entry></feed>
