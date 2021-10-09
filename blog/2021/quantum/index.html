@@ -11,7 +11,7 @@
   Lionel  Cheng
 
 
-  | Taking scientific notes efficiently using Markdown + KaTeX
+  | BIG Quantum Hackaton
 
 </title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -37,7 +37,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/blog/2021/notes/">
+<link rel="canonical" href="/blog/2021/quantum/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -158,43 +158,43 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Taking scientific notes efficiently using Markdown + KaTeX</h1>
-    <p class="post-meta">October 3, 2021</p>
+    <h1 class="post-title">BIG Quantum Hackaton</h1>
+    <p class="post-meta">October 5, 2021</p>
   </header>
 
   <article class="post-content">
-    <p>As a PhD student, reading scientific articles and textbooks has occupied a significant amount of my time. I have been at some point overwhelmed by the quantity of knowledge to process and synthesize at the same time. Here is the workflow that I have found to try to keep up to date with all the research projects that I have going on. It involves <code class="language-plaintext highlighter-rouge">VSCode</code>, <code class="language-plaintext highlighter-rouge">Markdown</code> and a little library that I have written <a href="https://github.com/lionelchg/Markdown2LaTeX">Markdown2LaTeX</a>.</p>
+    <p>I had the chance to spend 4 days at the BIG Quantum Hackaton organized in Paris from October 2nd to October 5th 2021 by QuantX, the alumni association from Ecole Polytechnique on quantum physics. Two days were dedicated to a technical phase, from which 5 projects out of 10 were selected to continue in a business phase.</p>
 
-<p>I have been taking notes on paper notebooks for quite a long time at the beginning of my PhD, stacking them one on top of the other over time. When I wanted to go back to some thoughts that I had it was always a tedious process to find them back in my pile of notebooks. After that I would usually start writing a TeX about it, translating whatever I had written a while ago. This workflow had several drawbacks: it was not easy to back go over ideas that I had at some point and remembering exactly what I was thinking at that time. Since ideas at the beginning are not well formed and finished it does not really make sense to write it to TeX at that moment.</p>
+<p>Les Atomes de Savoie team which I was a part of had to work on waveform optimization using quantum circuit, a problem proposed by Thales to enhance the resolution of their radars. Phase modulation is used on an electromagnetic wave by dividing it in \(N\) chunks in order to precisely measure the time of the reflection. Having a larger number of chunks increases the accuracy of the radar so the higher the \(N\), the better. Finding the waveform for a given \(N\) is a complex combinatorial problem where for large \(N\) the space of configurations can be huge.</p>
 
-<p>Then I discovered <code class="language-plaintext highlighter-rouge">Markdown</code> in <code class="language-plaintext highlighter-rouge">VSCode</code> using Markdown Preview. This tool allows to write down <code class="language-plaintext highlighter-rouge">Markdown</code> and instantly see your writings on a side tab (see screenshot below). Using KaTeX, it is possible to write math as TeX quickly and efficiently with a real time synchronization on the preview tab (definitions of KaTeX macros is also possible). I have since created a single workspace to hold all my Markdown notes files (creating symbolic links whenever necessary). It has allowed me to take and store notes at the same place and is also a great tool to interact with others during visioconferences without needing to scribble some complicated math formula on your notebook and then showing it on the webcam.</p>
-
-<div class="row">
+<div class="row" style="text-align: center">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="/assets/img/notes/katex_demo.gif" alt="" title="example image" />
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/quantum/waveform.gif" alt="" title="example image" />
     </div>
 </div>
 <div class="caption">
-    Markdown Preview in VSCode.
+    Phase reconstruction of a signal.
 </div>
 
-<p>The <code class="language-plaintext highlighter-rouge">Markdown+Math</code> and <code class="language-plaintext highlighter-rouge">Markdown Preview Enhanced</code> extensions from <code class="language-plaintext highlighter-rouge">VSCode</code> need to be downloaded and then you can start writing math using <code class="language-plaintext highlighter-rouge">$$...$$</code> delimiters.</p>
+<p>Quantum reformulation of the problem allowed us to use Quantum Approximate Optimization Algorithm (QAOA) to tackle this problem and find optimal configurations. The algorithm was not nearly as robust and fast as classical algorithms but the task of reformulating the problem in a quantum framework alone is an interesting exercice. The power coming from the \(2^n\) vector space spanned by \(n\) qubits is always promising for such a large space of possible configurations.</p>
 
-<p>Taking this logic a step further, after a Markdown file is written and cleaned, it can be converted directly into a LaTeX file using <a href="https://github.com/lionelchg/Markdown2LaTeX">Markdown2LaTeX</a>. Running the following command</p>
+<p>The benefits of quantum computing are not yet understood in every field and this is why so many companies like BMW or Thales invest it although the return on investment is far from being immediate. Lots of things are not settled in quantum computing but the most pressing issue seems to be qubit reliability. Many algorithms are ready for deployment but the hardware is not here yet.</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>md2latex <span class="nt">-f</span> demo.md <span class="nt">-m</span> macros.md
-</code></pre></div></div>
-
-<p>allows to retrieve the LaTeX file. A file where KaTeX macros are defined can be supplemented and macros can be converted to TeX format.</p>
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="/assets/img/notes/markdown2latex.gif" alt="" title="example image" />
+<div class="row justify-content-sm-center">
+    <div class="col-sm-7 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/quantum/technical.png" alt="" title="example image" />
+    </div>
+    <div class="col-sm-5 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/quantum/business.jpeg" alt="" title="example image" />
     </div>
 </div>
 <div class="caption">
-    Markdown file converted to LaTeX file and resulting pdf.
+    Les Atomes de Savoie with Luca Mondada from Pytket and Alexandre Krajenbrink, organizer of the Hackaton (left). Les Fonds du Savoyard (right)
 </div>
+
+<p>Finishing second at the end of the technical phase, Tristan and I went on to help the business team (Les Fonds du Savoyard) assigned to our case understand the new technical possibilities that could be achieved by solving our initial problem. Seeing how technical improvement can be monetized and pitched was a great experience from a PhD student point of view, opening my eyes on the business side of things. Pitching a satellite company project called <code class="language-plaintext highlighter-rouge">QubitSat</code> to leverage the increased accuracy that quantum computing could achieve, the business team also finished second!</p>
+
+<p>Quantum computing is only at its early stage and the scope of things to do is limitless. The energy and excitement are there and hopefully in ten or twenty years quantum computing will be present in our lives just like classical computers are now today.</p>
 
   </article>
 
